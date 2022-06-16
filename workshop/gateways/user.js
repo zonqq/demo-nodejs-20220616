@@ -15,7 +15,7 @@ function getAllUser() {
     })
     .catch((error) => {
       return {
-        code: 500,
+        code: 20000,
       };
     });
 }
