@@ -1,5 +1,5 @@
 const request = require("supertest");
-const app = require("../server");
+const app = require("../../server");
 
 test('Hello World API', async () => {
   const response = await request(app)

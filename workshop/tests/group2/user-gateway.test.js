@@ -1,5 +1,5 @@
 const nock = require('nock')
-const getAllUser = require("../gateways/user");
+const getAllUser = require("../../gateways/user");
 
 test('Success case with 200', async () => {
   nock('https://jsonplaceholder.typicode.com')

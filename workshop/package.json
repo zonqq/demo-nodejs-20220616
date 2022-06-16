@@ -8,6 +8,8 @@
     "migrate": "npx sequelize-cli db:migrate",
     "migrate:reset": "npx sequelize-cli db:migrate:undo:all && npm run migrate",
     "test": "API_URL=https://jsonplaceholder.typicode.com  jest --coverage",
+    "test:group1": "API_URL=https://jsonplaceholder.typicode.com  jest --testPathPattern=/group1/",
+    "test:group2": "API_URL=https://jsonplaceholder.typicode.com  jest --testPathPattern=/group2/",
     "coverage": "npm run test && cat ./coverage/lcov.info | coveralls"
   },
   "author": "up1",
