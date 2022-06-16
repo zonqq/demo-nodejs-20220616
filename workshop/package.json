@@ -16,6 +16,11 @@
     "outputDirectory": "./test-reports",
     "outputName": "junit.xml"
   },
+  "jest": {
+    "coverageReporters": [
+      "cobertura"
+    ]
+  },
   "author": "up1",
   "license": "ISC",
   "dependencies": {
