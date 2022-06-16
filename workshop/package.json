@@ -7,10 +7,14 @@
     "dev": "node index.js",
     "migrate": "npx sequelize-cli db:migrate",
     "migrate:reset": "npx sequelize-cli db:migrate:undo:all && npm run migrate",
-    "test": "API_URL=https://jsonplaceholder.typicode.com  jest --coverage",
+    "test": "API_URL=https://jsonplaceholder.typicode.com  jest --coverage --reporters=default --reporters=jest-junit",
     "test:group1": "API_URL=https://jsonplaceholder.typicode.com  jest --testPathPattern=/group1/",
     "test:group2": "API_URL=https://jsonplaceholder.typicode.com  jest --testPathPattern=/group2/",
     "coverage": "npm run test && cat ./coverage/lcov.info | coveralls"
+  },
+  "jest-junit": {
+    "outputDirectory": "./test-reports",
+    "outputName": "junit.xml"
   },
   "author": "up1",
   "license": "ISC",
@@ -24,6 +28,7 @@
   "devDependencies": {
     "coveralls": "^3.1.1",
     "jest": "^28.1.1",
+    "jest-junit": "^13.2.0",
     "nock": "^13.2.7",
     "supertest": "^6.2.3"
   }
