@@ -18,7 +18,7 @@ Reset database
 $npm run migrate:reset
 ```
 
-## Working with Postgresql
+## 2. Working with Postgresql
 ```
 $psql -U user -W workshop
 
@@ -30,4 +30,10 @@ switch to database
 
 list of tables
 >\dt
+```
+
+## 3. Run postman with [newman](https://www.npmjs.com/package/newman)
+```
+$cd postman
+$newman run workshop.postman_collection.json
 ```
