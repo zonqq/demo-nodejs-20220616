@@ -19,6 +19,14 @@ $npm run migrate:reset
 ```
 
 ## 2. Working with Postgresql
+Start database server
+```
+$cd postgresql
+$docker compose up -d
+$docker compose ps
+```
+
+Access to database
 ```
 $psql -U user -W workshop
 
@@ -30,6 +38,9 @@ switch to database
 
 list of tables
 >\dt
+
+select data from Posts table
+>select * from "Posts";
 ```
 
 ## 3. Run postman with [newman](https://www.npmjs.com/package/newman)
