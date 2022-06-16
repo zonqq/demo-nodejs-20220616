@@ -4,7 +4,7 @@
     "password": "password",
     "database": "workshop",
     "host": "127.0.0.1",
-    "dialect": "postgres"
+    "dialect": "mysql"
   },
   "test": {
     "username": "root",
