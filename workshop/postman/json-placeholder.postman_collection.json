@@ -24,6 +24,7 @@
 							"};",
 							"",
 							"var data = pm.response.json();",
+							"pm.collectionVariables.set(\"USER_EMAIL\", data.email);",
 							"",
 							"pm.test('Schema is valid', function () {",
 							"    pm.expect(tv4.validate(data, schema)).to.be.true;",
@@ -64,6 +65,39 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "2",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "email",
+						"value": "{{USER_EMAIL}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/users/1",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "USER_EMAIL",
+			"value": ""
 		}
 	]
 }
