@@ -7,6 +7,8 @@
     "dev": "node index.js",
     "migrate": "npx sequelize-cli db:migrate",
     "migrate:reset": "npx sequelize-cli db:migrate:undo:all && npm run migrate",
+    "seed": "npx sequelize-cli db:seed:all",
+    "seed:undo": "npx sequelize-cli db:seed:undo:all",
     "test": "API_URL=https://jsonplaceholder.typicode.com  jest --coverage --reporters=default --reporters=jest-junit",
     "test:group1": "API_URL=https://jsonplaceholder.typicode.com  jest --testPathPattern=/group1/",
     "test:group2": "API_URL=https://jsonplaceholder.typicode.com  jest --testPathPattern=/group2/",
